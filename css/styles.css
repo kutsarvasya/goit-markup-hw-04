@@ -1,0 +1,324 @@
+:root {
+    --title-text-color: #2E2F42;
+    --accent-color:#4D5AE5;
+    --white-color:#ffffff;
+    --text-color:#434455;
+    --bg-color: #F4F4FD;
+    --border-color: #E7E9FC;
+    --btn-bg-color: #404BBF;
+    --card-shadow:0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+
+        --row-indent:24px;
+        --col-indent:24px;
+        --items: 3;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    font-size: 16px;
+}
+h1,
+h2,
+h3, 
+h4,
+h5,
+h6,
+p
+{
+    margin: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+ul, ol {
+    margin: 0;
+    padding: 0 ;
+    list-style: none;
+    
+}
+button {
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font: inherit;
+}
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+.container{
+        width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+}
+.header{
+    border-bottom: 1px solid var(--border-color);
+}
+.main-nav{
+    display:flex;
+    align-items: center;
+   
+   
+}
+
+/* разметка логотипа */
+.logo {
+    color: var(--title-text-color);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.logo-span {
+ color: var(--accent-color);
+}
+/* разметка навигации сайта */
+.site-nav{
+    display: flex;
+    margin-left: 76px;
+    gap: 40px;
+}
+.site-nav .link{
+    color: var(--title-text-color);
+    text-decoration: none; 
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    
+}
+.site-nav .link:hover,
+.site-nav .link:focus{
+    color: var(--accent-color); 
+}
+.link.current {
+    color: var(--accent-color);
+}
+.contact-nav {
+    display: flex;
+    margin-left: auto;
+    gap: 40px;
+}
+.contact-nav .link {
+color: var(--text-color);
+font-style: normal;
+text-decoration: none;
+line-height: 1.5;
+letter-spacing: 0.02em;
+padding-top: 24px;
+padding-bottom: 24px;
+}
+.contact-nav .link:hover,
+.contact-nav .link:focus {
+    color: var(--accent-color);
+
+}
+
+/*  */
+.hero{
+    background-color: var(--title-text-color);
+    text-align: center;
+    padding-top: 188px;
+    padding-bottom: 188px;
+   
+}
+
+.hero-title{
+    color: var(--white-color);
+    font-size: 56px;
+    letter-spacing: 0.02em;
+    line-height: 1.07;
+    width: 496px;
+    margin:0 auto;
+    margin-bottom: 48px;
+
+}
+.button-hero{
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    padding: 16px 32px;
+    min-width: 169px;
+    min-height: 56px;
+    border-radius: 4px;
+   
+}
+.button-hero:hover,
+.button-hero:focus{
+    background-color: var(--btn-bg-color);
+}
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  .section-container{
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+ .card-set {
+     display: flex;
+     flex-wrap: wrap;
+     row-gap: var(--row-indent);
+     column-gap: var(--col-indent);
+
+ }
+
+ .card-set-item {
+     flex-basis: calc((100% - var(--col-indent) * (var(--items) - 1)) / var(--items));
+ }
+
+ .card-content {
+     padding-left: 16px;
+     padding-top: 32px;
+     padding-bottom: 32px;
+ }
+
+ .feature {
+     --items: 4;
+ }
+
+.subtitle{
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+.subtitle-text{
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+}
+.section-title {
+    color: var(--title-text-color); 
+    font-size: 36px;
+    letter-spacing: 0.02em;
+    line-height: 1.11;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.section {
+    padding-bottom: 120px;
+    
+}
+.section-bg-color{
+background-color: var(--bg-color);
+padding-top: 120px;
+}
+.section-card-content{
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.subtitle-card{
+    color: var(--title-text-color);
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+        margin-bottom: 8px;
+
+}
+.section-item-team{
+    background-color: var(--white-color);
+    border-radius: 0px 0px 4px 4px;
+    /* width: 264px; */
+    margin-right: 24px;
+    box-shadow: var(--card-shadow) ;
+}
+
+
+/*  */
+.footer{
+    background-color: var(--title-text-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.logo-footer{
+    color: var(--bg-color);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+}
+.text-footer {
+    margin-top: 12px;
+    color: var(--border-color);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    max-width: 264px;
+    
+}
+/* портфолио кнопки */
+.button-decor{
+background-color:var(--bg-color);
+color: var(--accent-color);
+padding: 12px 24px;
+border-radius: 4px;
+border: 1px solid var(--border-color);
+
+}
+.button-decor:hover,
+.button-decor:focus{
+    background-color: var(--btn-bg-color);
+    color:var(--white-color) ;
+}
+
+.section-portfolio{
+   
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+.btn-list {
+    display: flex;
+    margin-bottom: 72px;
+    justify-content: center;
+    gap: 24px;
+}
+
+
+
+.border {
+    border-left:  1px solid #E7E9FC; 
+    border-right: 1px solid #E7E9FC;
+    border-bottom: 1px solid #E7E9FC;  
+}
+.bg-card{
+    background: #FFFFFF;
+        box-shadow: var(--card-shadow);
+        border-radius: 0px 0px 4px 4px;
+}
