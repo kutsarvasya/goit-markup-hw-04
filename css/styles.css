@@ -52,6 +52,7 @@ a {
     color: currentColor;
     text-decoration: none;
 }
+/* дублирующие классы */
 .container{
         max-width: 1158px;
         padding-left: 15px;
@@ -59,6 +60,18 @@ a {
         margin-left: auto;
         margin-right: auto;
 }
+ .card-set {
+     display: flex;
+     flex-wrap: wrap;
+     row-gap: var(--row-indent);
+     column-gap: var(--col-indent);
+
+ }
+
+ .card-set-item {
+     flex-basis: calc((100% - var(--col-indent) * (var(--items) - 1)) / var(--items));
+ }
+/* разметка шапки */
 .header{
     border-bottom: 1px solid var(--border-color);
     max-width: 1440px;
@@ -67,11 +80,8 @@ a {
 .main-nav{
     display:flex;
     align-items: center;
-   
-   
 }
 
-/* разметка логотипа */
 .logo {
     color: var(--title-text-color);
     font-family: 'Raleway', sans-serif;
@@ -87,7 +97,7 @@ a {
 .logo-span {
  color: var(--accent-color);
 }
-/* разметка навигации сайта */
+
 .site-nav{
     display: flex;
     margin-left: 76px;
@@ -130,18 +140,14 @@ padding-bottom: 24px;
 
 }
 
-/*  */
+/* разметка героя */
 .hero{
     background-color: var(--title-text-color);
     text-align: center;
     padding-top: 188px;
-    padding-bottom: 188px;
-   
+    padding-bottom: 188px; 
 }
-
-
 .hero-image {
-
     max-width: 1440px;
     height: 600px;
     margin-left: auto;
@@ -155,9 +161,7 @@ padding-bottom: 24px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
 }
-
 .hero-title{
     color: var(--white-color);
     font-size: 56px;
@@ -166,7 +170,6 @@ padding-bottom: 24px;
     width: 496px;
     margin:0 auto;
     margin-bottom: 48px;
-
 }
 .button-hero{
     color: var(--white-color);
@@ -178,15 +181,13 @@ padding-bottom: 24px;
     padding: 16px 32px;
     min-width: 169px;
     min-height: 56px;
-    border-radius: 4px;
-   
+    border-radius: 4px; 
 }
 .button-hero:hover,
 .button-hero:focus{
     background-color: var(--btn-bg-color);
 }
-
-
+/* разметка контейнера our features */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -204,24 +205,6 @@ padding-bottom: 24px;
     padding-top: 120px;
     padding-bottom: 120px;
   }
- .card-set {
-     display: flex;
-     flex-wrap: wrap;
-     row-gap: var(--row-indent);
-     column-gap: var(--col-indent);
-
- }
-
- .card-set-item {
-     flex-basis: calc((100% - var(--col-indent) * (var(--items) - 1)) / var(--items));
- }
-
- .card-content {
-     padding-left: 16px;
-     padding-top: 32px;
-     padding-bottom: 32px;
- }
-
  .feature {
      --items: 4;
  }
@@ -247,6 +230,7 @@ padding-bottom: 24px;
     letter-spacing: 0.02em;
     color: var(--text-color);
 }
+/* секция сотрудников */
 .section-title {
     color: var(--title-text-color); 
     font-size: 36px;
@@ -258,6 +242,9 @@ padding-bottom: 24px;
 }
 
 .section {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 120px;
     
 }
@@ -312,7 +299,12 @@ padding-top: 120px;
 .socials-card-margin{
     margin-bottom: 8px;
 }
-
+.bg-card {
+    background: var(--white-color);
+    box-shadow: var(--card-shadow);
+    border-radius: 0px 0px 4px 4px;
+}
+/* разьетка секции клиентов ссылки */
 .customers-list{
     display: flex;
     gap: 24px;
@@ -333,13 +325,16 @@ padding-top: 120px;
     border: 1px solid var(--btn-bg-color);
         fill: var(--btn-bg-color);
 }
-/*  */
+/* разметка футера */
 .footer{
     background-color: var(--title-text-color);
     padding-top: 100px;
     padding-bottom: 100px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.footer-conainer{
+.footer-container{
     display: flex;
 }
 .logo-footer{
@@ -393,18 +388,11 @@ color: var(--accent-color);
 padding: 12px 24px;
 border-radius: 4px;
 border: 1px solid var(--border-color);
-
 }
 .button-decor:hover,
 .button-decor:focus{
     background-color: var(--btn-bg-color);
     color:var(--white-color) ;
-}
-
-.section-portfolio{
-   
-    padding-top: 96px;
-    padding-bottom: 120px;
 }
 .btn-list {
     display: flex;
@@ -412,13 +400,21 @@ border: 1px solid var(--border-color);
     justify-content: center;
     gap: 24px;
 }
+/* разметка карточек портфолио */
+
+
+
+.section-portfolio{
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+ .card-content {
+     padding-left: 16px;
+     padding-top: 32px;
+     padding-bottom: 32px;
+ }
 .border {
     border-left:  1px solid #E7E9FC; 
     border-right: 1px solid #E7E9FC;
     border-bottom: 1px solid #E7E9FC;  
-}
-.bg-card{
-    background: var(--white-color);
-        box-shadow: var(--card-shadow);
-        border-radius: 0px 0px 4px 4px;
 }
