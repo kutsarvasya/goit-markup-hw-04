@@ -16,7 +16,7 @@
     0px 1px 6px rgba(46, 47, 66, 0.08);
         
 
-        --row-indent:24px;
+        --row-indent:48px;
         --col-indent:24px;
         --items: 3;
 }
@@ -421,12 +421,8 @@ border: 1px solid var(--border-color);
 .bg-portfolio{
     outline: transparent;
     display: inline-block;
-  
 }
-
-
 .bg-portfolio:hover,
 .bg-portfolio:focus{
     box-shadow: var(--card-shadow);
-   
 }
