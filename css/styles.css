@@ -6,9 +6,13 @@
     --bg-color: #F4F4FD;
     --border-color: #E7E9FC;
     --btn-bg-color: #404BBF;
-    --card-shadow:0px 1px 6px rgba(46, 47, 66, 0.08),
+    --card-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
+
+     --btn-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
+        
 
         --row-indent:24px;
         --col-indent:24px;
@@ -393,6 +397,7 @@ border: 1px solid var(--border-color);
 .button-decor:focus{
     background-color: var(--btn-bg-color);
     color:var(--white-color) ;
+    box-shadow: var(--btn-shadow);
 }
 .btn-list {
     display: flex;
@@ -417,4 +422,10 @@ border: 1px solid var(--border-color);
     border-left:  1px solid #E7E9FC; 
     border-right: 1px solid #E7E9FC;
     border-bottom: 1px solid #E7E9FC;  
+}
+
+
+.card-set-item.bg-portfolio:hover,
+.card-set-item.bg-portfolio:focus{
+    box-shadow: var(--card-shadow);
 }
